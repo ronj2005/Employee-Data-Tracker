@@ -35,23 +35,24 @@ PRIMARY KEY (id)
 
 INSERT INTO department (name)
 
-VALUES("Sales"),
-("IT"),
-("Legal"),
-("Finance");
+VALUES
+("Sales"),
+("Engineering"),
+("Finance"),
+("Legal");
 
 INSERT INTO role ( title, salary,department_id)
 
-VALUES("CTO",200000.00,2),
-("Director of IT",125000.00,2),
-("Developer",115000.00,2),
-("Sales Manager",85000.00,1),
-("Sales Rep",45000.00,1),
-("Senior Accountant",100000.00,4),
-("Accountant",65000.00,4),
+VALUES
+("CEO",400000.00,2),
+("Director of Engineering",115000.00,2),
+("Engineer",95000.00,2),
+("Sales Manager",65000.00,1),
+("Clerk",35000.00,1),
+("Senior Accountant",90000.00,4),
+("Junior Accountant",55000.00,4),
 ("Lawyer",135000.00,3),
-("Paralegal",70000.00,3),
-("Legal Secretary",35000.00,3);
+
 
 INSERT INTO employee (first_name,last_name,role_id,manager_id,is_manager)
 
