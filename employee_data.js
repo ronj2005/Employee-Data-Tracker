@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host: "localhost",
   // Your port; if not 3306
   port: 3306,
@@ -87,7 +87,7 @@ function viewByDepartment() {
       choices: ["Sales", "Engineering", "Finance", "Legal"],
     })
     .then((result) => {
-      var department = result.choice;
+      const department = result.choice;
       connection.query(
         "SELECT * FROM employee WHERE department=?",
         [department],
@@ -110,7 +110,7 @@ function viewByManager() {
       choices: ["Diego Chung", "Katie Jackson", "Margrett Martinez"],
     })
     .then((result) => {
-      var manager = result.choice;
+      const manager = result.choice;
       connection.query(
         "SELECT * FROM employee WHERE manager=?",
         [manager],
@@ -202,7 +202,7 @@ function removeEmployee() {
         },
       })
       .then((result) => {
-        var id = result.id;
+        const id = result.id;
         connection.query(
           "DELETE FROM employee WHERE id=?",
           [id],
@@ -245,8 +245,8 @@ function updateEmployeeRole() {
         },
       ])
       .then((result) => {
-        var newId = result.id;
-        var newRole = result.title;
+        const newId = result.id;
+        const newRole = result.title;
         connection.query(
           "UPDATE employee SET title=? WHERE id=?",
           [newRole, newId],
@@ -289,8 +289,8 @@ function updateEmployeeManager() {
         },
       ])
       .then((result) => {
-        var newId = result.id;
-        var newManager = result.manager;
+        const newId = result.id;
+        const newManager = result.manager;
         connection.query(
           "UPDATE employee SET manager=? WHERE id=?",
           [newManager, newId],
