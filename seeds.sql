@@ -1,19 +1,4 @@
-DROP DATABASE IF EXISTS employee_DB;
-CREATE DATABASE employee_DB;
 USE employee_DB;
-
-CREATE TABLE employee (
-
-id INT NOT NULL AUTO_INCREMENT,
-first_name varchar(30) NOT NULL,
-last_name varchar(30) NOT NULL,
-role_id INT NOT NULL,
-manager_id int,
-is_manager bool,
-
-PRIMARY KEY (id)
-);
-
 
 CREATE TABLE department (
 
@@ -56,7 +41,8 @@ VALUES
 
 INSERT INTO employee (first_name,last_name,role_id,manager_id,is_manager)
 
-VALUES('Diego','Chung',1,null,TRUE),
+VALUES
+('Diego','Chung',1,null,TRUE),
 ('Katie','Jackson',2,1,TRUE),
 ('Margrett','Martinez',2,2,FALSE),
 ('Peter','Shareef',3,2,FALSE),
