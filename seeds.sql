@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS employeeDB;
-CREATE DATABASE employeeDB;
-USE employeeDB;
+DROP DATABASE IF EXISTS employee_DB;
+CREATE DATABASE employee_DB;
+USE employee_DB;
 
 CREATE TABLE employee (
 
@@ -10,7 +10,7 @@ last_name varchar(30) NOT NULL,
 role_id INT NOT NULL,
 manager_id int,
 is_manager bool,
- 
+
 PRIMARY KEY (id)
 );
 
