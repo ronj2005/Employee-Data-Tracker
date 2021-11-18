@@ -18,6 +18,7 @@ connection.connect(function (err) {
 });
 
 //  Init program
+function startTracker(){
   inquirer
     .prompt({
       name: "choice",
@@ -61,8 +62,8 @@ connection.connect(function (err) {
     .catch((err) => {
       connection.end();
     });
-
-start();
+  }
+startTracker();
 
 // view all employee function
 function viewAllEmployees() {
